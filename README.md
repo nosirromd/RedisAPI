@@ -3,10 +3,10 @@
 
 In this step by step video we ask the question whether we can use Redis (renowned for caching) as primary database. In order to answer that question we build a .NET 6 API with 3 endpoints, using Redis as the primary database. The video includes:
 
-• An overview of Redis and its data types
-• Setting up a Redis instance in Docker
-• Using the redis-cli
-• Step by step build of our API
+* An overview of Redis and its data types
+* Setting up a Redis instance in Docker
+* Using the redis-cli
+* Step by step build of our API
 
 ## Description
 

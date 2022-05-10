@@ -11,6 +11,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using RedisAPI.Data;
 using StackExchange.Redis;
 
 namespace RedisAPI
@@ -29,6 +30,8 @@ namespace RedisAPI
         {
             services.AddSingleton<IConnectionMultiplexer>(opt =>
                 ConnectionMultiplexer.Connect(Configuration.GetConnectionString("RedisConnection")));
+            services.AddScoped<IPlatformRepo, RedisPlatformRepo>();
+            
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
